@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { GifState } from "../context/gifContext";
 import Gif from "../components/Gif";
+import FilterGif from "../components/FilterGif";
 
 const Homepage = () => {
   const { gif, gifs, setGifs, filter } = GifState();
@@ -19,7 +20,7 @@ const Homepage = () => {
   return (
     <div>
       <img src="/banner.gif" alt="banner" className="mt-4 rounded w-full" />
-      {/* <FilterGif /> */}
+      <FilterGif />
 
       <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2 mt-2">
         {gifs.map((gif) => {
