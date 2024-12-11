@@ -6,7 +6,6 @@ import Homepage from "./pages/Homepage";
 import Search from "./pages/Search";
 import Categories from "./pages/Categories";
 import SingleGif from "./pages/SingleGif";
-import Favorites from "./pages/Favorites";
 import GifProvider from "./context/GifContext";
 const router = createBrowserRouter([
   {
@@ -18,7 +17,6 @@ const router = createBrowserRouter([
       { path: "/:categories", element: <Categories /> },
       { path: "/search/:query", element: <Search /> },
       { path: "/:type/:slug", element: <SingleGif /> },
-      { path: "/favorites", element: <Favorites /> },
     ],
   },
 ]);

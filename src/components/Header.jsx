@@ -48,11 +48,11 @@ const Header = () => {
               } border-b-4 hidden lg:block`}
             />
           </button>
-          {favorites.length > 0 && (
+          {/* {favorites.length > 0 && (
             <div className="h-9 bg-gray-700 pt-1.5 px-6 cursor-pointer rounded">
               <Link to="/favorites">Favorite GIFs</Link>
             </div>
-          )}
+          )} */}
           <div>
             <button>
               <HiMiniBars3BottomRight

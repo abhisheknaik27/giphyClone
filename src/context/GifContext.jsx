@@ -4,9 +4,11 @@ import { createContext, useContext, useEffect, useState } from "react";
 const GifContext = createContext();
 
 const GifProvider = ({ children }) => {
+  const gif = new GiphyFetch(import.meta.env.VITE_GIPHY_API);
   const [gifs, setGifs] = useState([]);
   const [filter, setFilter] = useState("gifs");
   const [favorites, setFavorites] = useState([]);
+
   const addToFavorites = (id) => {
     if (favorites.includes(id)) {
       const updatedFav = favorites.filter((itemId) => itemId !== id);
@@ -21,10 +23,10 @@ const GifProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const fav = JSON.parse(localStorage.getItem("favGIFs")) || [];
-    setFavorites(fav);
+    const favorites = JSON.parse(localStorage.getItem("favGIFs")) || [];
+    setFavorites(favorites);
   }, []);
-  const gif = new GiphyFetch(import.meta.env.VITE_GIPHY_API);
+
   return (
     <GifContext.Provider
       value={{
