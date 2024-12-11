@@ -7,7 +7,7 @@ import Search from "./pages/Search";
 import Categories from "./pages/Categories";
 import SingleGif from "./pages/SingleGif";
 import Favorites from "./pages/Favorites";
-import GifProvider from "./context/gifContext";
+import GifProvider from "./context/GifContext";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
