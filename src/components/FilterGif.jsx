@@ -1,9 +1,9 @@
 import React from "react";
-import { GifState } from "../context/gifContext";
+import { GifState } from "../context/GifContext";
 import { HiMiniArrowTrendingUp } from "react-icons/hi2";
 
 const filters = [
-  ({
+  {
     title: "GIFs",
     value: "gifs",
     background:
@@ -18,7 +18,7 @@ const filters = [
     title: "Text",
     value: "text",
     background: "bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-500",
-  }),
+  },
 ];
 
 const FilterGif = ({ alignLeft = false, showTrending = true }) => {

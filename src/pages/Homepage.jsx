@@ -23,9 +23,9 @@ const Homepage = () => {
       <FilterGif />
 
       <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2 mt-2">
-        {gifs.map((gif) => {
+        {/* {gifs.map((gif) => {
           return <Gif gif={gif} key={gif.title} />;
-        })}
+        })} */}
       </div>
     </div>
   );
