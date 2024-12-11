@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiEllipsisVertical, HiMiniBars3BottomRight } from "react-icons/hi2";
-import { GifState } from "../context/gifContext";
+import { GifState } from "../context/GifContext";
 import GifSearch from "./GifSearch";
 
 const Header = () => {
@@ -48,7 +48,7 @@ const Header = () => {
               } border-b-4 hidden lg:block`}
             />
           </button>
-          {favorites.lenght > 0 && (
+          {favorites.length > 0 && (
             <div className="h-9 bg-gray-700 pt-1.5 px-6 cursor-pointer rounded">
               <Link to="/favorites">Favorite GIFs</Link>
             </div>
